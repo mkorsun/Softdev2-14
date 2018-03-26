@@ -19,6 +19,9 @@ var createchart = function(){
     var barEnter = bar.data(data).enter().append("div");
    
     barEnter.transition().duration(3000).style("width", function(d){return d+"px";});
+    barEnter.text(function(d){
+	return categories[data.indexOf(d)] + "   $"+d;
+    });	
     
 }
 
